@@ -12,8 +12,8 @@ using System;
 namespace SalesWebMVC.Migrations
 {
     [DbContext(typeof(SalesWebMVCContext))]
-    [Migration("20191124040506_OherEntities")]
-    partial class OherEntities
+    [Migration("20191124174654_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -59,6 +59,8 @@ namespace SalesWebMVC.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<double>("BaseSalary");
+
                     b.Property<DateTime>("BithDate");
 
                     b.Property<int?>("DepartmentId");
@@ -66,8 +68,6 @@ namespace SalesWebMVC.Migrations
                     b.Property<string>("Email");
 
                     b.Property<string>("Name");
-
-                    b.Property<double>("Salary");
 
                     b.HasKey("Id");
 
